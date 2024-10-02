@@ -5,7 +5,8 @@ using MySql.Data.MySqlClient;
 class BancoDados
 {
     string stringConexao = "server=localhost;uid=root;pwd=1234;database=Mysql";
-    
+    string palavraSecreta = "senac";
+
     public string? Login(string email, string senha){
         string selectUsuario = $"SELECT * FROM sakila.usuarios WHERE email =  \"{email}\""; // ou \"everton@se.senac.com.br\"
         MySqlConnection conexao;
@@ -24,9 +25,7 @@ class BancoDados
                 //Console.WriteLine($"{emailDB} : {senhaDB}");
                 if (senha == senhaDB)
                 {
-                    Random random = new Random();
-                    int numero = random.Next(1000, 9999);
-                    string token = Utils.GerarHash(numero.ToString());
+                    string token = Utils.GerarHash(emailDB+senhaDB+palavraSecreta);
                 
                     return token;
                    
