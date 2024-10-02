@@ -1,0 +1,30 @@
+{
+    "id": 1,
+    "nome": "cliente A",
+    "email": "clienteA@gmail.com",
+    "ativo": false,
+    "itens": [
+    
+        {
+            "id": 0,
+            "nome": "Item 01",
+            "valor": 10.0
+        },
+        {
+            "id": 1,
+            "nome": "Item 02",
+            "valor": 10.0
+        },
+        {
+            "id": 2,
+            "nome": "Item 03",
+            "valor": 10.0
+        }
+
+    ],
+    "dependente":{
+        "nome":"Dependente A",
+        "idade": 10,
+        "email": "dependenteA@outlook.com"
+    }
+}
